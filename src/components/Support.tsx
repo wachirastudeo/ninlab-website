@@ -1,4 +1,4 @@
-import { Coffee } from 'lucide-react';
+"use client";
 
 export default function Support() {
     return (
@@ -7,8 +7,8 @@ export default function Support() {
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Icon */}
                     <div className="mb-6 flex justify-center">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
-                            <Coffee className="text-white" size={32} />
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                            <span className="text-3xl">💙</span>
                         </div>
                     </div>
 
@@ -20,17 +20,19 @@ export default function Support() {
                         ช่วยสนับสนุนการพัฒนาต่อยอดโปรเจคนี้
                     </p>
 
-                    {/* Support Option */}
+                    {/* PromptPay QR */}
                     <div className="flex justify-center mb-8">
-                        <a
-                            href="#"
-                            className="group p-8 rounded-2xl bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 hover:border-yellow-500/40 transition-all hover:scale-105 max-w-sm w-full"
-                        >
-                            <Coffee className="mx-auto mb-4 text-yellow-400" size={48} />
-                            <h3 className="text-xl font-semibold mb-2">Buy Me a Coffee</h3>
-                            <p className="text-sm text-gray-400 mb-4">Support with a one-time donation</p>
-                            <p className="text-xs text-gray-500 font-kanit">สนับสนุนด้วยการซื้อกาแฟให้</p>
-                        </a>
+                        <div className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 max-w-sm">
+                            <a href="/promptpay-qr.jpg" target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity">
+                                <img
+                                    src="/promptpay-qr.jpg"
+                                    alt="PromptPay QR Code"
+                                    className="w-full rounded-lg mb-4 cursor-pointer"
+                                />
+                            </a>
+                            <p className="text-center text-sm text-gray-400 mb-2">คลิกเพื่อขยาย QR Code</p>
+                            <p className="text-center text-xs text-gray-500 font-kanit">นาย วชิระ อวยพร</p>
+                        </div>
                     </div>
 
                     <p className="text-xs text-gray-600">

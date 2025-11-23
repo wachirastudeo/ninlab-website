@@ -35,10 +35,10 @@ export default function Hero() {
                         <Monitor size={20} />
                         Download for Windows
                     </button>
-                    <button className="flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all font-kanit">
+                    <a href="/promptpay-qr.jpg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all font-kanit">
                         <Coffee size={20} />
                         สนับสนุนค่ากาแฟ
-                    </button>
+                    </a>
                 </div>
 
                 <div className="relative mx-auto max-w-5xl rounded-xl border border-gray-800 bg-gray-900/50 p-2 shadow-2xl backdrop-blur-sm">
