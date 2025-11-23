@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import { Sliders, Palette, Droplet, Sparkles, Crop, Download } from 'lucide-react';
+import Image from 'next/image';
+import { Sliders, Palette, Droplet, SunMedium, Sparkles, Crop, Download } from 'lucide-react';
 
 const screenshots = [
     {
@@ -10,6 +11,13 @@ const screenshots = [
         icon: Sliders,
         description: 'Exposure, Contrast, Gamma',
         image: '/screenshots/basic.png'
+    },
+    {
+        id: 'tone',
+        name: 'Tone',
+        icon: SunMedium,
+        description: 'Split Toning - Highlights & Shadows',
+        image: '/screenshots/tone.png'
     },
     {
         id: 'color',
@@ -92,13 +100,14 @@ export default function Screenshots() {
                                 <p className="text-gray-400 text-sm">{screenshot.description}</p>
                             </div>
                             <div className="relative rounded-xl border border-gray-800 bg-gray-900/50 p-2 shadow-2xl backdrop-blur-sm overflow-hidden">
-                                <div className="aspect-video rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-600">
-                                    {/* Placeholder - Replace with actual screenshots */}
-                                    <div className="text-center">
-                                        <screenshot.icon size={64} className="mx-auto mb-4 text-gray-700" />
-                                        <p className="text-lg">Screenshot: {screenshot.name}</p>
-                                        <p className="text-sm text-gray-700 mt-2">Add your app screenshot here</p>
-                                    </div>
+                                <div className="aspect-video rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden relative">
+                                    <Image
+                                        src={screenshot.image}
+                                        alt={`${screenshot.name} - ${screenshot.description}`}
+                                        fill
+                                        className="object-contain"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                                    />
                                 </div>
                             </div>
                         </div>

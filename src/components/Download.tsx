@@ -16,7 +16,7 @@ export default function Download() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="#" className="group flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all">
+                            <a href="https://drive.google.com/drive/folders/1Cnfm1UgXPOX33iyM3RQxkkerW6FdIAFV?usp=drive_link" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-gray-200 transition-all">
                                 <Apple size={24} />
                                 <div className="text-left">
                                     <div className="text-xs font-normal">Download for</div>
@@ -25,7 +25,7 @@ export default function Download() {
                                 <ArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0" size={16} />
                             </a>
 
-                            <a href="#" className="group flex items-center justify-center gap-3 bg-gray-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-700 transition-all border border-gray-700">
+                            <a href="https://drive.google.com/drive/folders/1p5UOkaQesl5hB2-gF33ot39gi2gBrcMh?usp=drive_link" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-center gap-3 bg-gray-800 text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-700 transition-all border border-gray-700">
                                 <Monitor size={24} />
                                 <div className="text-left">
                                     <div className="text-xs font-normal text-gray-400">Download for</div>

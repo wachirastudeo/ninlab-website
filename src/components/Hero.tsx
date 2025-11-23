@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Download, Monitor, Apple, Coffee } from 'lucide-react';
 
 export default function Hero() {
@@ -27,14 +28,14 @@ export default function Hero() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                    <button className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition-all">
+                    <a href="https://drive.google.com/drive/folders/1Cnfm1UgXPOX33iyM3RQxkkerW6FdIAFV?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition-all">
                         <Apple size={20} />
                         Download for macOS
-                    </button>
-                    <button className="flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all border border-gray-700">
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1p5UOkaQesl5hB2-gF33ot39gi2gBrcMh?usp=drive_link" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-gray-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-700 transition-all border border-gray-700">
                         <Monitor size={20} />
                         Download for Windows
-                    </button>
+                    </a>
                     <a href="/promptpay-qr.jpg" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-8 py-4 rounded-full font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all font-kanit">
                         <Coffee size={20} />
                         สนับสนุนค่ากาแฟ
@@ -42,9 +43,15 @@ export default function Hero() {
                 </div>
 
                 <div className="relative mx-auto max-w-5xl rounded-xl border border-gray-800 bg-gray-900/50 p-2 shadow-2xl backdrop-blur-sm">
-                    <div className="aspect-video rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-gray-600">
-                        {/* Placeholder for App Screenshot */}
-                        <span className="text-lg">App Screenshot Placeholder</span>
+                    <div className="aspect-video rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden relative">
+                        <Image
+                            src="/hero-screenshot.png"
+                            alt="Ninlab Photo Editor Interface"
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                            priority
+                        />
                     </div>
                 </div>
             </div>
